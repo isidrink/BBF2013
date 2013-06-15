@@ -46,5 +46,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		window.kendoMobileApplication = new kendo.mobile.Application(document.body);
     }
 };
