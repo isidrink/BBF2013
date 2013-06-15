@@ -34,7 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		var app = new kendo.mobile.Application(document.body);
+		//var app = new kendo.mobile.Application(document.body);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
