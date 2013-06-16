@@ -46,6 +46,20 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);*/
+		var url = "http://adapptalo.es/data.js";
+
+		$.getScript(url, scriptSuccess);
 		window.kendoMobileApplication = new kendo.mobile.Application(document.body);
     }
 };
+
+var markets = [];
+
+function scriptSuccess(data, textStatus, jqXHR) {
+	
+	for ( var i=0; i<markets.length; i++ ) {
+	    markets[i].push( i.toString() );
+	}
+	alert(markets.length );
+	//console.log( "scriptSuccess: " + markets.length );
+}
